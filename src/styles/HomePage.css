@@ -1,0 +1,36 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url("https://cdn.vectorstock.com/i/2000v/16/84/romantic-background-vector-27211684.avif")
+    no-repeat center center/cover;
+}
+
+.content {
+  text-align: center;
+}
+
+.animated-text {
+  font-size: 3rem;
+  color: #ff6b6b;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

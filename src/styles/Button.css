@@ -1,0 +1,29 @@
+.shared-button {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shared-button:hover {
+  transform: scale(1.1);
+}
+
+.no-move {
+  position: absolute;
+  top: calc(50% + 50px);
+  left: calc(50% + 50px);
+  transform: translate(-50%, -50%);
+  animation: moveAway 0.3s ease;
+}
+
+@keyframes moveAway {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(calc(50px + 20%), calc(-50px - 20%));
+  }
+}

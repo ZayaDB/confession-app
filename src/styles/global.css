@@ -1,0 +1,22 @@
+body {
+  background-color: #ffeef2;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.yes-button {
+  background-color: #ff85b3;
+  color: white;
+}
+
+.no-button {
+  background-color: #f3f3f3;
+  color: black;
+}

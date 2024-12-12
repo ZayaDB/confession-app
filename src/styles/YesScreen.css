@@ -1,0 +1,29 @@
+.yes-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #ffeef2;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+.content {
+  text-align: center;
+}
+
+.next-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #ff6b6b;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.next-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}

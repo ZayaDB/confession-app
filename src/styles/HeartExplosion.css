@@ -1,0 +1,16 @@
+.heart-explosion {
+  font-size: 3rem;
+  text-align: center;
+  animation: heart-fade 3s ease-in-out forwards;
+}
+
+@keyframes heart-fade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
