@@ -1,36 +1,198 @@
+/* HomePage.css */
+
+/* 공통 스타일 */
 .homepage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: url("https://cdn.vectorstock.com/i/2000v/16/84/romantic-background-vector-27211684.avif")
-    no-repeat center center/cover;
+  font-family: "Arial", sans-serif;
 }
 
-.content {
+.first-section,
+.second-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.animated-text {
-  font-size: 3rem;
-  color: #ff6b6b;
-  animation: fadeIn 2s ease-in-out;
+.first-section {
+  background-color: #f8e1f4;
+  position: relative;
 }
 
-.buttons {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1rem;
+.second-section {
+  background-color: #d5f3fe;
+  position: relative;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+.princess {
+  width: 150px;
+  height: auto;
+  margin-top: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 공주 떠오르는 애니메이션 */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.scroll-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff8aa8;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scroll-button:hover {
+  background-color: #ff5a7c;
+}
+
+.buttons .yes-button,
+.buttons .no-button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.yes-button {
+  background-color: #00c851;
+  color: white;
+}
+
+.no-button {
+  background-color: #ff4444;
+  color: white;
+}
+
+h1:hover {
+  color: pink;
+}
+/* HomePage.css */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
   to {
+    transform: translateY(100vh);
+  }
+}
+.princess-container {
+  position: absolute;
+  bottom: 0;
+  left: -20%; /* 화면 밖에서 시작 */
+  animation: walkIn 5s forwards;
+}
+
+@keyframes walkIn {
+  to {
+    left: 20%; /* 화면 중앙으로 이동 */
+  }
+}
+/* 스크롤 텍스트 */
+.scroll-text {
+  font-family: "Cinzel Decorative", cursive; /* 공주 느낌의 폰트 */
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffebf3; /* 연한 핑크빛 */
+  text-shadow: 2px 2px 8px rgba(255, 182, 193, 0.8); /* 반짝이는 효과 */
+  animation: fadeIn 3s ease-out, glow 2s infinite alternate;
+}
+h1.scroll-text {
+  margin-top: 2rem;
+}
+p.scroll-text {
+  margin-top: -5rem;
+}
+
+/* 텍스트가 서서히 등장하는 애니메이션 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* 반짝이는 텍스트 애니메이션 */
+@keyframes glow {
+  from {
+    text-shadow: 2px 2px 10px rgba(255, 182, 193, 0.6);
+  }
+  to {
+    text-shadow: 4px 4px 20px rgba(255, 105, 180, 1);
+  }
+}
+/* 화면 전환용 배경 효과 */
+.success-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffebf3, #f8c8dc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeInScreen 2s forwards;
+}
+
+/* 화면 서서히 나타나는 애니메이션 */
+@keyframes fadeInScreen {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* 텍스트 스타일 */
+.success-message {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 4rem;
+  color: #ff69b4; /* 핑크빛 */
+  text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.7);
+  animation: bounceText 2s ease-in-out infinite;
+}
+
+/* 반짝이며 흔들리는 효과 */
+@keyframes bounceText {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
   }
 }

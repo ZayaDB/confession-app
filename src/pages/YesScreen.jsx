@@ -1,21 +1,12 @@
 import React, { useState } from "react";
 import HeartExplosion from "../components/HeartExplosion";
-import DateSelector from "../components/DateSelector";
-import FoodSelector from "../components/FoodSelector";
 import "../styles/YesScreen.css";
 
 const YesScreen = () => {
   const [showAnimation, setShowAnimation] = useState(true);
-  const [selectedDate, setSelectedDate] = useState("");
-  const [selectedFood, setSelectedFood] = useState("");
 
   const handleAnimationEnd = () => {
     setShowAnimation(false); // 애니메이션 종료 후 내용 표시
-  };
-
-  const handleNextStep = () => {
-    alert(`날짜: ${selectedDate}, 음식: ${selectedFood}`);
-    // 다음 페이지로 이동하거나 선택 사항 저장
   };
 
   return (
@@ -23,19 +14,14 @@ const YesScreen = () => {
       {showAnimation ? (
         <HeartExplosion onEnd={handleAnimationEnd} />
       ) : (
-        <div className="content">
-          <h2>만남 준비하기 💖</h2>
-          <DateSelector onSelectDate={setSelectedDate} />
-          <FoodSelector onSelectFood={setSelectedFood} />
-          <button
-            className="next-button"
-            disabled={!selectedDate || !selectedFood}
-            onClick={handleNextStep}
-          >
-            다음으로
-          </button>
+        <div className="yes-page">
+          <h2 className="celebrate-text">Thank you be my guest Princess 💖</h2>
         </div>
       )}
+      <img
+        src="https://media3.giphy.com/media/lMameLIF8voLu8HxWV/200.gif?cid=6c09b952bldtksb1q5lf7b2rx0mrxx2e11nshb55kf9ckl2r&ep=v1_gifs_search&rid=200.gif&ct=g"
+        alt=""
+      />
     </div>
   );
 };

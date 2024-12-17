@@ -4,8 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #ffeef2;
-  font-family: "Comic Sans MS", sans-serif;
+  background: linear-gradient(to bottom, #ffe5ec, #ff9a8b);
 }
 
 .content {
@@ -26,4 +25,35 @@
 .next-button:disabled {
   background-color: #ddd;
   cursor: not-allowed;
+}
+
+.celebrate-text {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 4rem;
+  color: white;
+  text-shadow: 3px 3px 10px rgba(255, 105, 180, 0.5);
+  animation: glowText 2s infinite;
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+  }
+  50% {
+    text-shadow: 0 0 15px #ff1493, 0 0 25px #ff1493, 0 0 35px #ff1493;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+  }
+}
+
+.celebrate-subtext {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.celebration-gif {
+  width: 300px;
+  margin-top: 20px;
 }
