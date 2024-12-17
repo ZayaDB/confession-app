@@ -57,3 +57,49 @@
   width: 300px;
   margin-top: 20px;
 }
+.restaurant-section {
+  margin: 20px auto;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #ff6f61;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff4d40;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+strong {
+  color: #ff6f61;
+}
