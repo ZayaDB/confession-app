@@ -3,7 +3,6 @@ import "../styles/HomePage.css";
 import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
-  const [isNoHovering, setIsNoHovering] = useState(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
   const navigate = useNavigate();
 
@@ -13,18 +12,7 @@ const HomePage = () => {
       navigate("/yes"); // 3초 후 화면 전환
     }, 3000);
   };
-  const handleNoHover = () => {
-    setIsNoHovering(true);
-  };
 
-  const handleNoReset = () => {
-    setIsNoHovering(false);
-  };
-  const scrollToSecondSection = () => {
-    document
-      .getElementById("second-section")
-      .scrollIntoView({ behavior: "smooth" });
-  };
   useEffect(() => {
     const snowContainer = document.querySelector(".homepage");
     for (let i = 0; i < 50; i++) {
