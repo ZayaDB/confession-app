@@ -1,96 +1,21 @@
-/* HomePage.css */
-
 /* 공통 스타일 */
+body {
+  margin: 0;
+  font-family: "Dancing Script", cursive;
+  background: linear-gradient(to bottom, #f7e8d6, #a0d2eb);
+  overflow-x: hidden;
+}
+
 .homepage {
-  font-family: "Arial", sans-serif;
-}
-
-.first-section,
-.second-section {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.first-section {
-  background-color: #f8e1f4;
   position: relative;
 }
 
-.second-section {
-  background-color: #d5f3fe;
-  position: relative;
-}
-
-.princess {
-  width: 150px;
-  height: auto;
-  margin-top: 20px;
-  animation: float 3s ease-in-out infinite;
-}
-
-/* 공주 떠오르는 애니메이션 */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-.scroll-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #ff8aa8;
-  border: none;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.scroll-button:hover {
-  background-color: #ff5a7c;
-}
-
-.buttons .yes-button,
-.buttons .no-button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.yes-button {
-  background-color: #00c851;
-  color: white;
-}
-
-.no-button {
-  background-color: #ff4444;
-  color: white;
-}
-
-h1:hover {
-  color: pink;
-}
-/* HomePage.css */
 .snowflake {
-  position: fixed;
+  position: absolute;
   top: -10px;
-  left: 50%;
-  width: 10px;
-  height: 10px;
   background: white;
   border-radius: 50%;
   animation: fall linear infinite;
-  opacity: 0.8;
 }
 
 @keyframes fall {
@@ -98,101 +23,127 @@ h1:hover {
     transform: translateY(100vh);
   }
 }
-.princess-container {
-  position: absolute;
-  bottom: 0;
-  left: -20%; /* 화면 밖에서 시작 */
-  animation: walkIn 5s forwards;
+
+/* 첫 화면 */
+.start-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-@keyframes walkIn {
-  to {
-    left: 20%; /* 화면 중앙으로 이동 */
-  }
-}
-/* 스크롤 텍스트 */
-.scroll-text {
-  font-family: "Cinzel Decorative", cursive; /* 공주 느낌의 폰트 */
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  color: #ffebf3; /* 연한 핑크빛 */
-  text-shadow: 2px 2px 8px rgba(255, 182, 193, 0.8); /* 반짝이는 효과 */
-  animation: fadeIn 3s ease-out, glow 2s infinite alternate;
-}
-h1.scroll-text {
-  margin-top: 2rem;
-}
-p.scroll-text {
-  margin-top: -5rem;
+.open-letter-button {
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  background: #ff6363;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* 텍스트가 서서히 등장하는 애니메이션 */
+.open-letter-button:hover {
+  background: #e05252;
+  transform: scale(1.1);
+}
+
+/* 편지 화면 */
+.letter-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
 @keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
-    transform: translateY(20px);
   }
-  100% {
+  to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
-/* 반짝이는 텍스트 애니메이션 */
-@keyframes glow {
-  from {
-    text-shadow: 2px 2px 10px rgba(255, 182, 193, 0.6);
-  }
-  to {
-    text-shadow: 4px 4px 20px rgba(255, 105, 180, 1);
-  }
+.letter {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
 }
-/* 화면 전환용 배경 효과 */
+
+.letter h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.letter p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.yes-button,
+.no-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yes-button {
+  background: #4caf50;
+  color: white;
+}
+
+.yes-button:hover {
+  background: #45a049;
+  transform: scale(1.1);
+}
+
+.no-button {
+  background: #f44336;
+  color: white;
+}
+
+.no-button:hover {
+  background: #d32f2f;
+  transform: scale(1.1);
+}
+
+/* 성공 화면 */
 .success-screen {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #ffebf3, #f8c8dc);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  animation: fadeInScreen 2s forwards;
+  align-items: center;
+  color: white;
+  z-index: 999;
 }
 
-/* 화면 서서히 나타나는 애니메이션 */
-@keyframes fadeInScreen {
-  0% {
-    opacity: 0;
-    visibility: visible;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-/* 텍스트 스타일 */
 .success-message {
-  font-family: "Cinzel Decorative", cursive;
-  font-size: 4rem;
-  color: #ff69b4; /* 핑크빛 */
-  text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.7);
-  animation: bounceText 2s ease-in-out infinite;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-/* 반짝이며 흔들리는 효과 */
-@keyframes bounceText {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+.success-image {
+  width: 300px;
 }

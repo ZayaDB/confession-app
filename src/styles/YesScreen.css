@@ -1,105 +1,88 @@
 .yes-screen {
+  font-family: "Dancing Script", cursive;
+  background: linear-gradient(to bottom, #fef9f9, #f6c5c5);
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  background: linear-gradient(to bottom, #ffe5ec, #ff9a8b);
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
 }
 
-.content {
+.yes-page {
   text-align: center;
 }
 
-.next-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  background-color: #ff6b6b;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.next-button:disabled {
-  background-color: #ddd;
-  cursor: not-allowed;
+.thank-you-message {
+  font-size: 2.5rem;
+  color: #ff6363;
+  margin-bottom: 1rem;
 }
 
 .celebrate-text {
-  font-family: "Cinzel Decorative", cursive;
-  font-size: 4rem;
-  color: white;
-  text-shadow: 3px 3px 10px rgba(255, 105, 180, 0.5);
-  animation: glowText 2s infinite;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 2rem;
 }
 
-@keyframes glowText {
-  0% {
-    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
-  }
-  50% {
-    text-shadow: 0 0 15px #ff1493, 0 0 25px #ff1493, 0 0 35px #ff1493;
-  }
-  100% {
-    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
-  }
-}
-
-.celebrate-subtext {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  color: #fff;
-}
-
-.celebration-gif {
-  width: 300px;
-  margin-top: 20px;
-}
 .restaurant-section {
-  margin: 20px auto;
-  max-width: 400px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  background-color: #fafafa;
+  text-align: center;
+}
+
+.restaurant-select,
+.food-select {
+  margin: 15px 0;
 }
 
 label {
   display: block;
-  margin: 10px 0 5px;
-  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #444;
 }
 
-select,
-button {
-  width: 100%;
+select {
   padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
+  font-size: 1rem;
+  border: 1px solid #ddd;
   border-radius: 5px;
 }
 
-button {
-  background-color: #ff6f61;
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1rem;
   color: white;
-  font-weight: bold;
+  background: #4caf50;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-button:hover {
-  background-color: #ff4d40;
+.submit-button:hover {
+  background: #45a049;
+  transform: scale(1.1);
 }
 
 .result {
   margin-top: 20px;
-  font-size: 1.2em;
-  color: #333;
+  font-size: 1.2rem;
+  color: #555;
+}
+.restaurant-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-strong {
-  color: #ff6f61;
+.restaurant-button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
 }
