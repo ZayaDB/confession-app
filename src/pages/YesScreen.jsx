@@ -22,11 +22,21 @@ const YesScreen = () => {
             네가 내 마음을 받아줘서 너무 고마워. 지금부터 특별한 여정을 시작해
             보자! 😊
           </p>
+          <video
+            src="/images/hi.mp4"
+            type="video/mp4"
+            loop
+            autoPlay
+            muted
+            playsInline
+            className="responsive-video"
+          />
+
           <button
             className="restaurant-button"
             onClick={() => navigate("/restaurants")} // 클릭 시 /restaurants로 이동
           >
-            미래로 가자 ->
+            미래로 가자
           </button>
         </div>
       )}

@@ -86,3 +86,10 @@ select {
   background: #0056b3;
   transform: scale(1.05);
 }
+
+.responsive-video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
