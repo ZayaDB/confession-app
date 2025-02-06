@@ -8,7 +8,7 @@ export default function BirthdayPage() {
   const [showWish, setShowWish] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
   const [audio] = useState(new Audio("/music/birth.mp3"));
-  const images = ["/images/4.png", "/images/5.png", "/images/1.png"];
+  const images = ["/images/1.png"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -101,7 +101,7 @@ export default function BirthdayPage() {
               transition={{ duration: 1 }}
               className="wish-text"
             >
-              🌟 close your eyes and whisper your wish 🌟
+              🌟 눈 감고 소원 빌어 보세요 🌟
             </motion.h2>
           )}
         </>
