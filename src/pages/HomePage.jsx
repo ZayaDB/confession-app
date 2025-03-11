@@ -9,7 +9,6 @@ export default function BirthdayPage() {
   const [currentImage, setCurrentImage] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
   const [audio] = useState(new Audio("/music/birth.mp3"));
-
   const images = [
     "/images/1.png",
     "/images/ai_g_img_2025-03-11_1741691119063_5557.jpg",
@@ -21,11 +20,11 @@ export default function BirthdayPage() {
       setTimeout(() => {
         setCurrentImage((prev) => (prev + 1) % images.length);
         setFadeOut(false); // 새 이미지 페이드 인
-      }, 1000);
-    }, 4000);
+      }, 1000); // 페이드 아웃 후 1초 후 이미지 변경
+    }, 4000); // 4초마다 이미지 변경
 
     return () => clearInterval(interval);
-  }, []); // ✅ images.length 제거
+  }, [images.length]); // ✅ ESLint 경고 해결
 
   const startSequence = () => {
     setShowSorry(true);
@@ -41,6 +40,7 @@ export default function BirthdayPage() {
         setShowMessage(true);
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

@@ -239,3 +239,70 @@
   border-radius: 10px;
   position: absolute;
 }
+.birthday-container {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(to bottom, #1a1a2e, #16213e);
+  min-height: 100vh;
+  color: white;
+}
+
+.start-button {
+  padding: 15px 30px;
+  font-size: 20px;
+  background: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 64, 129, 0.4);
+}
+
+.sorry-container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.sorry-text {
+  font-size: 28px;
+  color: #ffcccb;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(255, 204, 203, 0.5);
+}
+
+.sorry-gif {
+  width: 180px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.highlight {
+  color: #ffd700;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+}
+
+.neon-text {
+  font-size: 40px;
+  color: #ff0;
+  text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 20px #ff0;
+}
+
+.image-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.birthday-img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  position: absolute;
+}
