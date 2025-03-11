@@ -21,10 +21,11 @@ export default function BirthdayPage() {
       setTimeout(() => {
         setCurrentImage((prev) => (prev + 1) % images.length);
         setFadeOut(false); // 새 이미지 페이드 인
-      }, 1000); // 페이드 아웃 후 1초 후 이미지 변경
-    }, 4000); // 4초마다 이미지 변경
+      }, 1000);
+    }, 4000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, []); // ✅ images.length 제거
 
   const startSequence = () => {
     setShowSorry(true);
